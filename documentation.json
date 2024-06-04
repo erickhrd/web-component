@@ -193,7 +193,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n\n.storybook-button--primary:hover {\n  color: #1ea7fd;\n  background-color: white;\n  border:solid 1px #1ea7fd;\n}\n\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
                     "styleUrl": "./button.css"
                 }
             ],
@@ -210,6 +210,158 @@
                     }
                 }
             }
+        },
+        {
+            "name": "CardComponent",
+            "id": "component-CardComponent-9016c4d9631b5cf514be9fbe5dfc4d2540a485dd4d885529dd799d4cccd896acf1f1494baa45354bc4d84c8ac7119b55d607f31cef6c2a5c92fba9f653715253",
+            "file": "src/stories/card.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-card",
+            "styleUrls": [
+                "./card.css"
+            ],
+            "styles": [],
+            "template": " <div class=\"storybook-card\" *ngFor=\"let data of item; let i = index\">\n  <div class=\"storybook-card--img-container\">\n    <img [src]=\"data.image\">\n  </div>\n  <div class=\"storybook-card--text-container\">\n    <p style=\"font-style: italic;\">{{data.caption}}</p>\n    <h3>{{data.title}}</h3>\n    <p>{{data.description}}</p>\n  </div>\n  <div class=\"storybook-card--buttons\">\n    <storybook-button\n      size=\"small\"\n      [primary]=\"true\"\n      (onClick)=\"togglePopover(i)\"\n      label=\"Share\"\n    ></storybook-button>\n    <storybook-button\n      size=\"small\"\n      [primary]=\"true\"\n      (onClick)=\"onMore.emit($event)\"\n      label=\"More\"\n    ></storybook-button>\n  </div>\n  <div *ngIf=\"isPopoverVisible[i]\" class=\"popover\">\n    <button class=\"popover-close\" (click)=\"closePopover(i)\">X</button>\n    <div class=\"social-share\">\n      <ul>\n        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i><span> Share on Twitter</span></a></li>\n        <li><a href=\"#\"><i class=\"fa fa-facebook-f\"></i><span> Share on Facebook</span></a></li>\n        <li><a href=\"#\"><i class=\"fa fa-envelope\"></i><span> Share by Email</span></a></li>\n      </ul>\n    </div>\n  </div>\n</div>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "onMore",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 49,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onShare",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 48,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "isPopoverVisible",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 52,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "item",
+                    "defaultValue": "(Data as any).default",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 51,
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "closePopover",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 58,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "togglePopover",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 54,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ButtonComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Output, EventEmitter } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from './button.component';\nimport * as Data from './card-data.json';\n\n@Component({\n  selector: 'storybook-card',\n  standalone: true,\n  imports: [CommonModule, ButtonComponent],\n  template: ` \n  <div class=\"storybook-card\" *ngFor=\"let data of item; let i = index\">\n    <div class=\"storybook-card--img-container\">\n      <img [src]=\"data.image\">\n    </div>\n    <div class=\"storybook-card--text-container\">\n      <p style=\"font-style: italic;\">{{data.caption}}</p>\n      <h3>{{data.title}}</h3>\n      <p>{{data.description}}</p>\n    </div>\n    <div class=\"storybook-card--buttons\">\n      <storybook-button\n        size=\"small\"\n        [primary]=\"true\"\n        (onClick)=\"togglePopover(i)\"\n        label=\"Share\"\n      ></storybook-button>\n      <storybook-button\n        size=\"small\"\n        [primary]=\"true\"\n        (onClick)=\"onMore.emit($event)\"\n        label=\"More\"\n      ></storybook-button>\n    </div>\n    <div *ngIf=\"isPopoverVisible[i]\" class=\"popover\">\n      <button class=\"popover-close\" (click)=\"closePopover(i)\">X</button>\n      <div class=\"social-share\">\n        <ul>\n          <li><a href=\"#\"><i class=\"fa fa-twitter\"></i><span> Share on Twitter</span></a></li>\n          <li><a href=\"#\"><i class=\"fa fa-facebook-f\"></i><span> Share on Facebook</span></a></li>\n          <li><a href=\"#\"><i class=\"fa fa-envelope\"></i><span> Share by Email</span></a></li>\n        </ul>\n      </div>\n    </div>\n  </div>`,\n  styleUrls: ['./card.css'],\n})\nexport class CardComponent {\n  @Output() onShare = new EventEmitter<Event>();\n  @Output() onMore = new EventEmitter<Event>();\n\n  public item: any = (Data as any).default;\n  public isPopoverVisible: boolean[] = [];\n\n  togglePopover(index: number) {\n    this.isPopoverVisible[index] = !this.isPopoverVisible[index];\n  }\n\n  closePopover(index: number) {\n    this.isPopoverVisible[index] = false;\n  }\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "/* * {\n    margin: 0;\n    padding: 0;\n    font-family: \"Roboto\", sans-serif;\n  }\n \n  \n  .storybook-card {\n    margin: 40px;\n    position: relative;\n    max-width: 250px;\n    max-height: 350px;\n    box-shadow: 0 40px 60px -6px black;\n    border-bottom-right-radius: 10px;\n    border-bottom-left-radius: 10px;\n  }\n  \n  .storybook-card--title {\n    display: block;\n    text-align: center;\n    color: #fff;\n    background-color: #1e5341;\n    padding: 2%;\n    border-top-right-radius: 4px;\n    border-top-left-radius: 4px;\n  }\n  \n  .storybook-card img {\n    width: 100%;\n    height: 98%;\n    object-fit: cover;\n    display: block;\n    position: relative;\n    border-bottom-right-radius: 10px;\n    border-bottom-left-radius: 10px;\n  }\n  \n  .storybook-card--desc {\n    display: block;\n    color: #fff;\n    font-size: 1.2rem;\n    position: absolute;\n    height: 0;\n    top: 0;\n    opacity: 0;\n    padding: 18px 8%;\n    background-color: rgb(0, 0, 0);\n    overflow-y: scroll;\n    transition: 0.8s ease;\n  }\n  \n  .storybook-card:hover .storybook-card--desc {\n    opacity: 1;\n    height: 100%;\n  }\n  \n  h1 {\n    font-size: 2.8rem;\n    color: #fff;\n    margin: 40px 0 20px 0;\n    text-align: center;\n  } */\n\n  body {\n  text-align: center;\n  padding: 30px;\n  background: #f8f4f2;\n  font-family: Arial, Helvetica, sans-serif;\n}\n\n.storybook-card {\n  display: inline-block;\n  margin: 30px;\n  width: auto;\n  max-width: 320px;\n  padding: 15px;\n  text-align: center;\n  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);\n  border-radius:20px;\n}\n\n.storybook-card--img-container {\n    height: 230px;\n    width: 100%;\n    overflow: hidden;\n    border-radius: 20px;\n    display: inline-block;\n}\n\n.storybook-card--text-container {\n  padding: 10px;\n  background: #fff;\n  line-height: 19px;\n  font-family: 'Nunito Sans';\n  font-size: 14px;\n}\n\n.storybook-card--text-container h3 {\n  margin: 10px 0px 10px 0px;\n  color: #1ea7fd;\n  font-size: 18px;\n}\n\nstorybook-button {\n    margin: 10px;\n}\n\n.popover {\n  position: absolute;\n  background-color: white;\n  border: 1px solid #ddd;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);\n  padding: 10px;\n  z-index: 1000;\n  width: 200px;\n  border-radius: 5px;\n}\n\n.popover-close {\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  background: none;\n  border: none;\n  font-size: 16px;\n  cursor: pointer;\n}\n\n.social-share ul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n.social-share ul li {\n  margin: 10px 0;\n}\n\n.social-share ul li a {\n  text-decoration: none;\n  color: #333;\n  display: flex;\n  align-items: center;\n}\n\n.social-share ul li a i {\n  margin-right: 8px;\n  font-size: 18px;\n}\n\n.social-share ul li a:hover {\n  color: #007bff;\n}",
+                    "styleUrl": "./card.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
         },
         {
             "name": "HeaderComponent",
@@ -493,7 +645,7 @@
         ]
     },
     "coverage": {
-        "count": 16,
+        "count": 13,
         "status": "low",
         "files": [
             {
@@ -513,6 +665,15 @@
                 "coveragePercent": 83,
                 "coverageCount": "5/6",
                 "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
             },
             {
                 "filePath": "src/stories/header.component.ts",
