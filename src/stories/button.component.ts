@@ -10,6 +10,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     (click)="onClick.emit($event)"
     [ngClass]="classes"
     [ngStyle]="{ 'background-color': backgroundColor }"
+    [attr.popovertarget] = "popovertarget"
   >
     {{ label }}
   </button>`,
@@ -33,6 +34,12 @@ export class ButtonComponent {
    */
   @Input()
   size: 'small' | 'medium' | 'large' = 'medium';
+
+   /**
+   * What pop over target to use
+   */
+   @Input()
+   popovertarget?: string;
 
   /**
    * Button contents

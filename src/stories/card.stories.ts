@@ -23,4 +23,8 @@ type Story = StoryObj<CardComponent>;
 
 export const Vertical: Story = {};
 
-export const Horizontal: Story = {};
+export const Horizontal: Story = {
+  args: {
+    horizontal: true
+  },
+};
