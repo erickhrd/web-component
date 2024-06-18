@@ -1,0 +1,31 @@
+.storybook-image--normal {
+    min-height: 240px;
+    width: fill-available;
+    max-width: 320px;
+    border-radius: 20px;
+  }
+
+.storybook-image--gallery {
+    position: relative;
+    display: block;
+    min-height: 240px;
+    max-width: 320px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 480px;
+    background-color: rgba(0,0,0,0);
+  }
+
+  .thumb-bar img {
+    display: block;
+    width: 20%;
+    float: left;
+    cursor: pointer;
+  }
+
+ 
