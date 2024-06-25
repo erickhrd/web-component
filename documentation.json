@@ -223,7 +223,7 @@
         },
         {
             "name": "CardComponent",
-            "id": "component-CardComponent-725e3123a662bf845db3f893a45ae5750903d6bf8d927c77f896c064ca271916a648ccd11d6145a1e3deb3a3ef426d99c479cb47aeb78b5961a9cf7ccea52e2a",
+            "id": "component-CardComponent-f84ada839cfd120103533099090048ca234048a26518ab5966ed15cb4faaa7d07e54d1040a47cfda15572fae0442c347683b8c56a5957b9229547836fb03f3ba",
             "file": "src/stories/card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -235,7 +235,7 @@
                 "./card.css"
             ],
             "styles": [],
-            "template": "<div [ngClass]=\"direction\">\n<div [ngClass]=\"getClasses(i)\" *ngFor=\"let data of item; let i = index\">\n  <div class=\"storybook-card--img-container\" [ngClass]=\"imgContainer\" >\n    <storybook-image class=\"img\" [src]=\"data.image\"></storybook-image>\n    <p style=\"font-style: italic;\">{{data.caption}}</p>\n  </div>\n\n  <div class=\"storybook-card--text-container\" [ngClass]=\"textContainer\">\n    <h3>{{data.title}}</h3>\n    <p>{{isDescriptionExpanded[i] ? data.description : (data.description | slice:0:300) + '...'}}</p>\n    <div class=\"storybook-card--button-wrapper\">\n    <storybook-button\n      size=\"small\"\n      [primary]=\"true\"\n      popovertarget=\"popover-{{i}}\"\n      label=\"Share\"\n    ></storybook-button>\n    <storybook-button\n      size=\"small\"\n      [primary]=\"true\"\n      (onClick)=\"toggleDescription(i)\"\n      label=\"{{isDescriptionExpanded[i] ? 'Less' : 'More'}}\"\n    ></storybook-button>\n      <div id=\"popover-{{i}}\" popover></div>\n        <div class=\"storybook-card--share-menu\">\n        <div class=\"storybook-card--social-share\">\n          <ul>\n            <li><a href=\"http://www.twitter.com/share?url=http://www.google.com/\" target=\"_blank\"><i class=\"fa fa-twitter\"></i><span> Share on Twitter</span></a></li>\n            <li><a href=\"https://www.facebook.com/sharer/sharer.php?u=http://www.google.com/\" target=\"_blank\"><i class=\"fa fa-facebook\"></i><span> Share on Facebook</span></a></li>\n            <li><a href=\"mailto:?subject=I wanted you to see this site&amp;body=Check out this site http://www.google.com/\" target=\"_blank\"><i class=\"fa fa-envelope\"></i><span> Share by Email</span></a></li>\n          </ul>\n        </div>\n      </div>\n  </div>\n  </div>\n</div>\n</div>",
+            "template": "<div [ngClass]=\"direction\">\n<div [ngClass]=\"getClasses(i)\" *ngFor=\"let data of item; let i = index\">\n  <div class=\"storybook-card--img-container\" [ngClass]=\"imgContainer\" >\n    <storybook-image layout=slideshow  [src]=\"data.image\"></storybook-image>\n    <p style=\"font-style: italic;\">{{data.caption}}</p>\n  </div>\n\n  <div class=\"storybook-card--text-container\" [ngClass]=\"textContainer\">\n    <h3>{{data.title}}</h3>\n    <p>{{isDescriptionExpanded[i] ? data.description : (data.description | slice:0:300) + '...'}}</p>\n    <div class=\"storybook-card--button-wrapper\">\n    <storybook-button\n      size=\"small\"\n      [primary]=\"true\"\n      popovertarget=\"popover-{{i}}\"\n      label=\"Share\"\n    ></storybook-button>\n    <storybook-button\n      size=\"small\"\n      [primary]=\"true\"\n      (onClick)=\"toggleDescription(i)\"\n      label=\"{{isDescriptionExpanded[i] ? 'Less' : 'More'}}\"\n    ></storybook-button>\n      <div id=\"popover-{{i}}\" popover></div>\n        <div class=\"storybook-card--share-menu\">\n        <div class=\"storybook-card--social-share\">\n          <ul>\n            <li><a href=\"http://www.twitter.com/share?url=http://www.google.com/\" target=\"_blank\"><i class=\"fa fa-twitter\"></i><span> Share on Twitter</span></a></li>\n            <li><a href=\"https://www.facebook.com/sharer/sharer.php?u=http://www.google.com/\" target=\"_blank\"><i class=\"fa fa-facebook\"></i><span> Share on Facebook</span></a></li>\n            <li><a href=\"mailto:?subject=I wanted you to see this site&amp;body=Check out this site http://www.google.com/\" target=\"_blank\"><i class=\"fa fa-envelope\"></i><span> Share by Email</span></a></li>\n          </ul>\n        </div>\n      </div>\n  </div>\n  </div>\n</div>\n</div>",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -370,11 +370,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from './button.component';\nimport { ImageComponent } from './image.component';\nimport * as Data from './card-data.json';\n\n@Component({\n  selector: 'storybook-card',\n  standalone: true,\n  imports: [CommonModule, ButtonComponent, ImageComponent],\n  template: `\n  <div [ngClass]=\"direction\">\n  <div [ngClass]=\"getClasses(i)\" *ngFor=\"let data of item; let i = index\">\n    <div class=\"storybook-card--img-container\" [ngClass]=\"imgContainer\" >\n      <storybook-image class=\"img\" [src]=\"data.image\"></storybook-image>\n      <p style=\"font-style: italic;\">{{data.caption}}</p>\n    </div>\n    \n    <div class=\"storybook-card--text-container\" [ngClass]=\"textContainer\">\n      <h3>{{data.title}}</h3>\n      <p>{{isDescriptionExpanded[i] ? data.description : (data.description | slice:0:300) + '...'}}</p>\n      <div class=\"storybook-card--button-wrapper\">\n      <storybook-button\n        size=\"small\"\n        [primary]=\"true\"\n        popovertarget=\"popover-{{i}}\"\n        label=\"Share\"\n      ></storybook-button>\n      <storybook-button\n        size=\"small\"\n        [primary]=\"true\"\n        (onClick)=\"toggleDescription(i)\"\n        label=\"{{isDescriptionExpanded[i] ? 'Less' : 'More'}}\"\n      ></storybook-button>\n        <div id=\"popover-{{i}}\" popover></div>\n          <div class=\"storybook-card--share-menu\">\n          <div class=\"storybook-card--social-share\">\n            <ul>\n              <li><a href=\"http://www.twitter.com/share?url=http://www.google.com/\" target=\"_blank\"><i class=\"fa fa-twitter\"></i><span> Share on Twitter</span></a></li>\n              <li><a href=\"https://www.facebook.com/sharer/sharer.php?u=http://www.google.com/\" target=\"_blank\"><i class=\"fa fa-facebook\"></i><span> Share on Facebook</span></a></li>\n              <li><a href=\"mailto:?subject=I wanted you to see this site&amp;body=Check out this site http://www.google.com/\" target=\"_blank\"><i class=\"fa fa-envelope\"></i><span> Share by Email</span></a></li>\n            </ul>\n          </div>\n        </div>\n    </div>\n    </div>\n  </div>\n  </div>`,\n  styleUrls: ['./card.css'],\n})\nexport class CardComponent {\n  /**\n   * Direction of the component\n   */\n  @Input()\n  horizontal = false;\n  \n  /**\n   * Import and use data from JSON file\n   */\n  public item: any = (Data as any).default;\n\n  /**\n   * Initialized boolean for the expansion of the description\n   */\n  public isDescriptionExpanded: boolean[] = [];\n\n  /**\n   * Toggle description using the \"More\" button taking the index of the item\n   */\n  toggleDescription(index: number){\n    this.isDescriptionExpanded[index] = !this.isDescriptionExpanded[index];\n  }\n\n  public get classes(): string[] {\n    const mode = this.horizontal ? 'storybook-card--horizontal' : 'storybook-card--vertical';\n    return [mode];\n  }\n\n  public get direction(): string[] {\n    const mode = this.horizontal ? 'storybook-card--container-horizontal' : 'storybook-card--container-vertical';\n\n    return [mode];\n  }\n\n  public get imgContainer(): string[] {\n    const mode = this.horizontal ? 'storybook-card--img-container-horizontal' : '';\n\n    return [mode];\n  }\n\n  public get textContainer(): string[] {\n    const mode = this.horizontal ? 'storybook-card--text-container-horizontal' : '';\n\n    return [mode];\n  }\n\n   /**\n   * Push another class when description is expanded taking the index of the item\n   */\n  public getClasses(index: number): string[] {\n    const baseClasses = this.classes;\n    if (this.isDescriptionExpanded[index]){\n      baseClasses.push('storybook-card--vertical-expanded');\n    }\n    return baseClasses;\n  }\n}",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from './button.component';\nimport { ImageComponent } from './image.component';\nimport * as Data from './card-data.json';\n\n@Component({\n  selector: 'storybook-card',\n  standalone: true,\n  imports: [CommonModule, ButtonComponent, ImageComponent],\n  template: `\n  <div [ngClass]=\"direction\">\n  <div [ngClass]=\"getClasses(i)\" *ngFor=\"let data of item; let i = index\">\n    <div class=\"storybook-card--img-container\" [ngClass]=\"imgContainer\" >\n      <storybook-image layout=slideshow  [src]=\"data.image\"></storybook-image>\n      <p style=\"font-style: italic;\">{{data.caption}}</p>\n    </div>\n    \n    <div class=\"storybook-card--text-container\" [ngClass]=\"textContainer\">\n      <h3>{{data.title}}</h3>\n      <p>{{isDescriptionExpanded[i] ? data.description : (data.description | slice:0:300) + '...'}}</p>\n      <div class=\"storybook-card--button-wrapper\">\n      <storybook-button\n        size=\"small\"\n        [primary]=\"true\"\n        popovertarget=\"popover-{{i}}\"\n        label=\"Share\"\n      ></storybook-button>\n      <storybook-button\n        size=\"small\"\n        [primary]=\"true\"\n        (onClick)=\"toggleDescription(i)\"\n        label=\"{{isDescriptionExpanded[i] ? 'Less' : 'More'}}\"\n      ></storybook-button>\n        <div id=\"popover-{{i}}\" popover></div>\n          <div class=\"storybook-card--share-menu\">\n          <div class=\"storybook-card--social-share\">\n            <ul>\n              <li><a href=\"http://www.twitter.com/share?url=http://www.google.com/\" target=\"_blank\"><i class=\"fa fa-twitter\"></i><span> Share on Twitter</span></a></li>\n              <li><a href=\"https://www.facebook.com/sharer/sharer.php?u=http://www.google.com/\" target=\"_blank\"><i class=\"fa fa-facebook\"></i><span> Share on Facebook</span></a></li>\n              <li><a href=\"mailto:?subject=I wanted you to see this site&amp;body=Check out this site http://www.google.com/\" target=\"_blank\"><i class=\"fa fa-envelope\"></i><span> Share by Email</span></a></li>\n            </ul>\n          </div>\n        </div>\n    </div>\n    </div>\n  </div>\n  </div>`,\n  styleUrls: ['./card.css'],\n})\nexport class CardComponent {\n  /**\n   * Direction of the component\n   */\n  @Input()\n  horizontal = false;\n  \n  /**\n   * Import and use data from JSON file\n   */\n  public item: any = (Data as any).default;\n\n  /**\n   * Initialized boolean for the expansion of the description\n   */\n  public isDescriptionExpanded: boolean[] = [];\n\n  /**\n   * Toggle description using the \"More\" button taking the index of the item\n   */\n  toggleDescription(index: number){\n    this.isDescriptionExpanded[index] = !this.isDescriptionExpanded[index];\n  }\n\n  public get classes(): string[] {\n    const mode = this.horizontal ? 'storybook-card--horizontal' : 'storybook-card--vertical';\n    return [mode];\n  }\n\n  public get direction(): string[] {\n    const mode = this.horizontal ? 'storybook-card--container-horizontal' : 'storybook-card--container-vertical';\n\n    return [mode];\n  }\n\n  public get imgContainer(): string[] {\n    const mode = this.horizontal ? 'storybook-card--img-container-horizontal' : '';\n\n    return [mode];\n  }\n\n  public get textContainer(): string[] {\n    const mode = this.horizontal ? 'storybook-card--text-container-horizontal' : '';\n\n    return [mode];\n  }\n\n   /**\n   * Push another class when description is expanded taking the index of the item\n   */\n  public getClasses(index: number): string[] {\n    const baseClasses = this.classes;\n    if (this.isDescriptionExpanded[index]){\n      baseClasses.push('storybook-card--vertical-expanded');\n    }\n    return baseClasses;\n  }\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "  body {\n  box-sizing: border-box;\n  text-align: center;\n  padding: 30px;\n  background: #f8f4f2;\n  font-family: Arial, Helvetica, sans-serif;\n}\n\n.storybook-card--container-vertical{\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  justify-content: center;\n}\n\n.storybook-card--container-horizontal{\n  display: grid;\n  justify-content: center;\n}\n\n.storybook-card--vertical {\n  display: flex;\n  flex-direction: column;\n  margin: 15px;\n  width: auto;\n  height: 545px;\n  padding: 15px;\n  text-align: center;\n  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);\n  border-radius:20px;\n}\n\n.storybook-card--vertical-expanded {\n  height: fit-content;\n}\n\n.storybook-card--horizontal {\n  display: flex;\n  margin: 30px;\n  width: auto;\n  max-width: 577px;\n  padding: 15px;\n  text-align: center;\n  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);\n  border-radius:20px;\n}\n\n.storybook-card--img-container-vertical {\n    min-height: 230px;\n    width: 100%;\n    display: inline-block;\n}\n\n.storybook-card--img-container > p {\n  margin-top: 5px;\n  margin-bottom: 0;\n  font-size: 14px;\n  font-family: 'Nunito Sans';\n}\n\n.storybook-card--text-container{\n  padding: 10px;\n  font-size: 14px;\n  font-family: 'Nunito Sans';\n}\n\n.storybook-card--text-container h3 {\n  margin: 10px 0px 10px 0px;\n  color: #1ea7fd;\n  font-size: 18px;\n}\n\nstorybook-button {\n    margin: 10px;\n}\n\n.storybook-card--button-wrapper {\n  position: relative;\n }\n \n [popover] {\n   inset: unset;\n   width: auto;\n   height: auto;\n   padding: 0;\n   border: none;\n   position: fixed;\n   pointer-events: none;\n \n   overlay: none; /* Not supported yet in all major browsers*/\n }\n \n .storybook-card--share-menu {\n   display: none;\n   position: absolute;\n   margin: 0;\n   inset: auto;\n   background-color: #fff;\n   width: fit-content;\n   height: fit-content;\n   border: 1px solid #ddd;\n   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);\n   padding: 10px;\n }\n \n [popover]:popover-open + .storybook-card--share-menu {\n   display: block;\n }\n\n.storybook-card--social-share ul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n.storybook-card--social-share ul li {\n  margin: 10px 0;\n}\n\n.storybook-card--social-share ul li a {\n  text-decoration: none;\n  color: #333;\n  display: flex;\n  align-items: center;\n}\n\n.storybook-card--social-share ul li a i {\n  margin-right: 8px;\n  font-size: 18px;\n}\n\n.storybook-card--social-share ul li a:hover {\n  color: #007bff;\n}\n\n@media (max-width: 755px){\n  .storybook-card--container-vertical{\n    display: grid;\n    grid-template-columns: 1fr;\n    justify-items: center;\n  }\n  .storybook-card--vertical{\n    width: min-content;\n  }\n}\n\n   @media (max-width: 900px) { \n  .storybook-card--img-container-horizontal {\n      width: 50%;\n   }\n   .storybook-card--text-container-horizontal{\n      width: 50%;\n   }\n   .storybook-card--horizontal{\n    min-width: 325px;\n   }\n}\n\n@media (max-width: 460px) {\n  .storybook-card--text-container-horizontal > div > storybook-button {\n    display: block;\n  }\n}",
+                    "data": "  body {\n  box-sizing: border-box;\n  text-align: center;\n  padding: 30px;\n  background: #f8f4f2;\n  font-family: Arial, Helvetica, sans-serif;\n}\n\n.storybook-card--container-vertical{\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  justify-content: center;\n}\n\n.storybook-card--container-horizontal{\n  display: grid;\n  justify-content: center;\n}\n\n.storybook-card--vertical {\n  display: flex;\n  flex-direction: column;\n  margin: 15px;\n  width: auto;\n  height: 640px;\n  padding: 15px;\n  justify-content: center;\n  text-align: center;\n  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);\n  border-radius:20px;\n}\n\n.storybook-card--vertical-expanded {\n  height: fit-content;\n}\n\n.storybook-card--horizontal {\n  display: flex;\n  margin: 30px;\n  width: auto;\n  max-width: 577px;\n  padding: 15px;\n  text-align: center;\n  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);\n  border-radius:20px;\n}\n\n.storybook-card--img-container-vertical {\n    min-height: 230px;\n    width: 100%;\n    display: inline-block;\n}\n\n.storybook-card--img-container > p {\n  margin-top: 5px;\n  margin-bottom: 0;\n  font-size: 14px;\n  font-family: 'Nunito Sans';\n}\n\n.storybook-card--text-container{\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 10px;\n  font-size: 14px;\n  font-family: 'Nunito Sans';\n}\n\n.storybook-card--text-container h3 {\n  margin: 10px 0px 10px 0px;\n  color: #1ea7fd;\n  font-size: 18px;\n}\n\nstorybook-button {\n    margin: 10px;\n}\n\n.storybook-card--button-wrapper {\n  max-width: 340px;\n  position: relative;\n }\n \n [popover] {\n   inset: unset;\n   width: auto;\n   height: auto;\n   padding: 0;\n   border: none;\n   position: fixed;\n   pointer-events: none;\n \n   overlay: none; /* Not supported yet in all major browsers*/\n }\n \n .storybook-card--share-menu {\n   display: none;\n   position: absolute;\n   margin: 0;\n   inset: auto;\n   background-color: #fff;\n   width: fit-content;\n   height: fit-content;\n   border: 1px solid #ddd;\n   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);\n   padding: 10px;\n   z-index: 1000;\n }\n \n [popover]:popover-open + .storybook-card--share-menu {\n   display: block;\n }\n\n.storybook-card--social-share ul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n.storybook-card--social-share ul li {\n  margin: 10px 0;\n}\n\n.storybook-card--social-share ul li a {\n  text-decoration: none;\n  color: #333;\n  display: flex;\n  align-items: center;\n}\n\n.storybook-card--social-share ul li a i {\n  margin-right: 8px;\n  font-size: 18px;\n}\n\n.storybook-card--social-share ul li a:hover {\n  color: #007bff;\n}\n\n@media (max-width: 755px){\n  .storybook-card--container-vertical{\n    display: grid;\n    grid-template-columns: 1fr;\n    justify-items: center;\n  }\n  .storybook-card--vertical{\n    width: 350px;\n  }\n}\n\n   @media (max-width: 900px) { \n  .storybook-card--img-container-horizontal {\n      width: 50%;\n   }\n   .storybook-card--text-container-horizontal{\n      width: 50%;\n   }\n   .storybook-card--horizontal{\n    min-width: 325px;\n   }\n}\n\n@media (max-width: 460px) {\n  .storybook-card--text-container-horizontal > div > storybook-button {\n    display: block;\n  }\n}",
                     "styleUrl": "./card.css"
                 }
             ],
@@ -507,7 +507,7 @@
         },
         {
             "name": "ImageComponent",
-            "id": "component-ImageComponent-0eb778e21a09070c87cc33be0e81fed69227deb223daf0e3eebd24b93e6e5a2174a2568ce0c2e4f6f518751b484b439aaa4a83de0854aec2a433038c8a447664",
+            "id": "component-ImageComponent-182937fbaa7f3135d6bc68241f16e7f34127461eb544e7adbb79a7c809f827670a5f5c83b95ec00a1f11dc392128860f2d7ab9efc1e3e1f9d845e9605e8148f9",
             "file": "src/stories/image.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -519,7 +519,7 @@
                 "./image.css"
             ],
             "styles": [],
-            "template": " <div *ngIf=\"!gallery\" >\n<img\n  [ngClass]=\"classes\"\n  [src]=\"src\"\n\n>\n</div>\n<ng-container *ngIf=\"gallery\">\n  <div  *ngFor=\"let image of source\">\n    <div [ngClass]=\"classes\">\n      <img class=\"displayed-img\" [src]=\"image.image\" >\n      <div class=\"overlay\"></div>\n    </div>\n\n    <div class=\"thumb-bar\">\n    </div>\n    </div>\n    </ng-container>",
+            "template": "<div *ngIf=\"layout === 'normal' && src && src.length > 0\">\n     <img [ngClass]=\"classes\" [src]=\"src[0]\">\n   </div>\n\n <div *ngIf=\"layout === 'gallery'\" [ngClass]=\"classes\">\n   <div class=\"storybook-image--gallery-main-image\">\n     <img [src]=\"selectedImage\">\n   </div>\n   <div class=\"storybook-image--gallery-thumb-bar\">\n     <img *ngFor=\"let imageSrc of src; let i = index\" [src]=\"imageSrc\" (click)=\"selectImage(imageSrc)\">\n   </div>\n </div>\n\n   <div *ngIf=\"layout === 'slideshow'\" [ngClass]=\"classes\">\n     <div *ngFor=\"let imageSrc of src; let i = index\" [ngClass]=\"{'mySlides': true, 'fade': true, 'active': i === slideIndex}\" class=\"storybook-image--slideshow-image-container\">\n     <div class=\"storybook-image--slideshow-image-wrapper\">\n\n           <a class=\"storybook-image--slideshow-prev\" (click)=\"plusSlides(-1)\">&#10094;</a>\n           <img [src]=\"imageSrc\">\n           <a class=\"storybook-image--slideshow-next\" (click)=\"plusSlides(1)\">&#10095;</a>\n\n     </div>\n     </div>\n     <div>\n       <span *ngFor=\"let imageSrc of src; let i = index\" class=\"storybook-image--slideshow-dot\" [ngClass]=\"{'active': i === slideIndex}\" (click)=\"currentSlide(i)\"></span>\n     </div>\n   </div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -529,9 +529,9 @@
                     "defaultValue": "'normal'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "\n\nWhat is the layout of the component?\n",
-                    "description": "<p>What is the layout of the component?</p>\n",
-                    "line": 37,
+                    "rawdescription": "\n\nDifferent types of layouts\n",
+                    "description": "<p>Different types of layouts</p>\n",
+                    "line": 43,
                     "type": "\"normal\" | \"gallery\" | \"slideshow\"",
                     "decorators": []
                 },
@@ -539,9 +539,9 @@
                     "name": "src",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "\n\nWhat image source to use\n",
-                    "description": "<p>What image source to use</p>\n",
-                    "line": 43,
+                    "rawdescription": "\n\nImage source coming from a string array\n",
+                    "description": "<p>Image source coming from a string array</p>\n",
+                    "line": 47,
                     "type": "string[]",
                     "decorators": []
                 }
@@ -549,20 +549,167 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "data",
-                    "defaultValue": "(Images as any).default",
+                    "name": "selectedImage",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "any",
+                    "type": "string | undefined",
                     "optional": false,
-                    "description": "",
-                    "line": 45,
+                    "description": "<p>The selected image for gallery or slideshow can be a string or undefined in case no value is assigned</p>\n",
+                    "line": 52,
+                    "rawdescription": "\n\nThe selected image for gallery or slideshow can be a string or undefined in case no value is assigned\n",
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "slideIndex",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "<p>This is used to keep track of the current slide index for the slideshow</p>\n",
+                    "line": 56,
+                    "rawdescription": "\n\nThis is used to keep track of the current slide index for the slideshow\n",
                     "modifierKind": [
                         125
                     ]
                 }
             ],
-            "methodsClass": [],
+            "methodsClass": [
+                {
+                    "name": "currentSlide",
+                    "args": [
+                        {
+                            "name": "n",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 99,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nSets the slide index to 'n'\n",
+                    "description": "<p>Sets the slide index to &#39;n&#39;</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": "n",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 61,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nInitializing the layout that will be used depending on length\n",
+                    "description": "<p>Initializing the layout that will be used depending on length</p>\n"
+                },
+                {
+                    "name": "plusSlides",
+                    "args": [
+                        {
+                            "name": "n",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 92,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nChanges the index depending on the 'n' value. Used for next/previous buttons\n",
+                    "description": "<p>Changes the index depending on the &#39;n&#39; value. Used for next/previous buttons</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": "n",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "selectImage",
+                    "args": [
+                        {
+                            "name": "imageSrc",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 77,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nSets selectedImage to imageSrc. Helps the gallery layout to change displayed image\n",
+                    "description": "<p>Sets selectedImage to imageSrc. Helps the gallery layout to change displayed image</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": "imageSrc",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "showSlides",
+                    "args": [
+                        {
+                            "name": "n",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 84,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nThis makes sure the slideIndex lands within a valid range for the array of images\n",
+                    "description": "<p>This makes sure the slideIndex lands within a valid range for the array of images</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": "n",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -577,16 +724,19 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input} from '@angular/core';\nimport * as Images from './image.json';\n\n\n@Component({\n  selector: 'storybook-image',\n  standalone: true,\n  imports: [CommonModule],\n  template: ` \n  <div *ngIf=\"!gallery\" >\n  <img\n    [ngClass]=\"classes\"\n    [src]=\"src\"\n    \n  >\n  </div>\n  <ng-container *ngIf=\"gallery\">\n    <div  *ngFor=\"let image of source\">\n      <div [ngClass]=\"classes\">\n        <img class=\"displayed-img\" [src]=\"image.image\" >\n        <div class=\"overlay\"></div>\n      </div>\n\n      <div class=\"thumb-bar\">\n      </div>\n      </div>\n      </ng-container>`,\n  styleUrls: ['./image.css'],\n})\nexport class ImageComponent {\n\n   /**\n   * What is the layout of the component?\n   */\n   @Input()\n   layout: 'normal' | 'gallery' | 'slideshow' = 'normal';\n\n   /**\n   * What image source to use\n   */\n   @Input()\n   src?: string[];\n\n  public data: any = (Images as any).default;\n   \n  public get classes(): string[] {\n   \n    return [`storybook-image--${this.layout}`];\n  }\n\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'storybook-image',\n  standalone: true,\n  imports: [CommonModule],\n  template: `\n   <div *ngIf=\"layout === 'normal' && src && src.length > 0\">\n        <img [ngClass]=\"classes\" [src]=\"src[0]\">\n      </div>\n\n    <div *ngIf=\"layout === 'gallery'\" [ngClass]=\"classes\">\n      <div class=\"storybook-image--gallery-main-image\">\n        <img [src]=\"selectedImage\">\n      </div>\n      <div class=\"storybook-image--gallery-thumb-bar\">\n        <img *ngFor=\"let imageSrc of src; let i = index\" [src]=\"imageSrc\" (click)=\"selectImage(imageSrc)\">\n      </div>\n    </div>\n\n      <div *ngIf=\"layout === 'slideshow'\" [ngClass]=\"classes\">\n        <div *ngFor=\"let imageSrc of src; let i = index\" [ngClass]=\"{'mySlides': true, 'fade': true, 'active': i === slideIndex}\" class=\"storybook-image--slideshow-image-container\">\n        <div class=\"storybook-image--slideshow-image-wrapper\">\n              \n              <a class=\"storybook-image--slideshow-prev\" (click)=\"plusSlides(-1)\">&#10094;</a>\n              <img [src]=\"imageSrc\">\n              <a class=\"storybook-image--slideshow-next\" (click)=\"plusSlides(1)\">&#10095;</a>\n              \n        </div>\n        </div>\n        <div>\n          <span *ngFor=\"let imageSrc of src; let i = index\" class=\"storybook-image--slideshow-dot\" [ngClass]=\"{'active': i === slideIndex}\" (click)=\"currentSlide(i)\"></span>\n        </div>\n      </div>\n  `,\n  styleUrls: ['./image.css'],\n})\nexport class ImageComponent implements OnInit {\n  /**\n   * Different types of layouts\n   */\n  @Input() layout: 'normal' | 'gallery' | 'slideshow' = 'normal';\n  /**\n   * Image source coming from a string array\n   */\n  @Input() src?: string[];\n\n  /**\n   * The selected image for gallery or slideshow can be a string or undefined in case no value is assigned\n   */\n  public selectedImage: string | undefined;\n  /**\n   * This is used to keep track of the current slide index for the slideshow\n   */\n  public slideIndex = 0;\n\n  /**\n   * Initializing the layout that will be used depending on length\n   */\n  ngOnInit() {\n    if (this.src && this.src.length > 0) {\n      if (this.src.length === 1) {\n        this.layout = 'normal';\n        this.selectedImage = this.src[0];\n      } else {\n        this.layout = this.layout;\n        this.selectedImage = this.src[0];\n        this.showSlides(this.slideIndex);\n      }\n    }\n  }\n\n  /**\n   * Sets selectedImage to imageSrc. Helps the gallery layout to change displayed image\n   */\n  selectImage(imageSrc: string) {\n    this.selectedImage = imageSrc;\n  }\n\n  /**\n   * This makes sure the slideIndex lands within a valid range for the array of images\n   */\n  showSlides(n: number) {\n    if (!this.src) return;\n    this.slideIndex = (n + this.src.length) % this.src.length;\n  }\n\n   /**\n   * Changes the index depending on the 'n' value. Used for next/previous buttons\n   */\n   plusSlides(n: number) {\n    this.showSlides(this.slideIndex + n);\n  }\n\n  /**\n   * Sets the slide index to 'n'\n   */\n  currentSlide(n: number) {\n    this.showSlides(n);\n  }\n\n  public get classes(): string[] {\n    return [`storybook-image--${this.layout}`];\n  }\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-image--normal {\n    min-height: 240px;\n    width: fill-available;\n    max-width: 320px;\n    border-radius: 20px;\n  }\n\n.storybook-image--gallery {\n    position: relative;\n    display: block;\n    min-height: 240px;\n    max-width: 320px;\n  }\n  \n  .overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 640px;\n    height: 480px;\n    background-color: rgba(0,0,0,0);\n  }\n\n  .thumb-bar img {\n    display: block;\n    width: 20%;\n    float: left;\n    cursor: pointer;\n  }\n\n ",
+                    "data": ".storybook-image--normal {\n    min-height: 240px;\n    width: fill-available;\n    max-width: 320px;\n    border-radius: 20px;\n  }\n\n  /* Gallery styles */\n  .storybook-image--gallery{\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  }\n  .storybook-image--gallery-main-image {\n    position: relative;\n    display: block;\n \n  }\n\n  .storybook-image--gallery-main-image > img{\n    display: block;\n    height: 240px;\n    width: fill-available;\n    max-width: 320px;\n    border-radius: 20px;\n  }\n  \n  .storybook-image--gallery-thumb-bar {\n    display: flex;\n    justify-content: center;\n    overflow-x: auto;\n  }\n  \n  .storybook-image--gallery-thumb-bar img {\n    display: block;\n    width: 20%;\n    height: 70px;\n    float: left;\n    cursor: pointer;\n    border-radius: 20px;\n    margin: 5px;\n  }\n  \n  /* Slideshow styles */\n  .storybook-image--slideshow{\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    position: relative;\n  }\n\n  .storybook-image--slideshow-image-container{\n    position: relative;\n  }\n\n  .storybook-image--slideshow-image-wrapper{\n    position: absolute;\n  }\n  .mySlides {\n    display: none;\n    height: 240px;\n    width: fill-available;\n    max-width: 320px;\n    border-radius: 20px;\n  }\n  \n  .mySlides.active {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    height: 240px;\n    width: fill-available;\n    max-width: 320px;\n    border-radius: 20px;\n  }\n  \n  .storybook-image--slideshow-image-wrapper > img{\n    height: 240px;\n    width: 100%;\n    max-width: 320px;\n    border-radius: 20px;\n  }\n  .fade {\n    animation: fade 1.5s;\n  }\n  \n  @keyframes fade {\n    from {opacity: .4}\n    to {opacity: 1}\n  }\n  \n  /* Next & previous buttons */\n  .storybook-image--slideshow-prev, .storybook-image--slideshow-next {\n    cursor: pointer;\n    position: absolute;\n    top: 50%;\n    width: auto;\n    padding: 16px;\n    color: white;\n    background-color: #717171;\n    opacity: 0.5;\n    font-weight: bold;\n    font-size: 18px;\n    transition: 0.6s ease;\n    border-radius: 0 3px 3px 0;\n    user-select: none;\n  }\n  \n  .storybook-image--slideshow-next {\n    right: 0;\n    border-radius: 3px 0 0 3px;\n  }\n  \n  .storybook-image--slideshow-prev:hover, .storybook-image--slideshow-next:hover {\n    background-color: rgba(0,0,0,0.8);\n  }\n  \n  /* The dots/circles */\n  .storybook-image--slideshow-dot {\n    cursor: pointer;\n    height: 15px;\n    width: 15px;\n    margin: 0 2px;\n    background-color: #bbb;\n    border-radius: 50%;\n    display: inline-block;\n    transition: background-color 0.6s ease;\n  }\n  \n .storybook-image--slideshow-dot:hover, .storybook-image--slideshow-dot.active {\n    background-color: #717171;\n  }",
                     "styleUrl": "./image.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
+            "implements": [
+                "OnInit"
+            ],
             "accessors": {
                 "classes": {
                     "name": "classes",
@@ -594,7 +744,7 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 47
+                        "line": 103
                     }
                 }
             }
@@ -795,7 +945,7 @@
         ]
     },
     "coverage": {
-        "count": 31,
+        "count": 36,
         "status": "medium",
         "files": [
             {
@@ -839,9 +989,9 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "ImageComponent",
-                "coveragePercent": 50,
-                "coverageCount": "2/4",
-                "status": "medium"
+                "coveragePercent": 90,
+                "coverageCount": "9/10",
+                "status": "very-good"
             },
             {
                 "filePath": "src/stories/page.component.ts",

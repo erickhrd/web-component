@@ -25,13 +25,15 @@ export const Normal: Story = {
 
 export const Gallery: Story = {
   args: {
-    layout: 'gallery'
+    layout: 'gallery',
+    src: ["https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg","https://www.we-love-pets.com/files/madison_vet/puppies-kittens.jpg","https://i.pinimg.com/236x/fb/b2/ee/fbb2ee85f55015b668de1f616f4047f3.jpg"]
   },
 };
 
 export const Slideshow: Story = {
   args: {
-    layout: 'slideshow'
+    layout: 'slideshow',
+    src: ["https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg","https://www.we-love-pets.com/files/madison_vet/puppies-kittens.jpg","https://i.pinimg.com/236x/fb/b2/ee/fbb2ee85f55015b668de1f616f4047f3.jpg"]
   },
 };
 

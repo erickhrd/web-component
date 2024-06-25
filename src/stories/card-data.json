@@ -1,42 +1,42 @@
 [
     {
       "title": "Malayan Tiger",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/MalayanTiger.jpg/320px-MalayanTiger.jpg",
+      "image": ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/MalayanTiger.jpg/320px-MalayanTiger.jpg","https://s28164.pcdn.co/files/Malayan-Tiger-0155-2199-1280x720.jpg","https://www.animalspot.net/wp-content/uploads/2016/08/Malayan-Tiger.jpg","https://malaysianwildlife.org/wp-content/uploads/2023/12/malayan-tiger-7063514_1280.jpg.webp"],
       "caption": "From measurements of 11 males and 8 females, the average length of a male is 8 ft 6 in (259 cm), and of a female 7 ft 10 in (239 cm)",
       "description": "The Malayan tiger is a tiger from a specific population of the Panthera tigris tigris subspecies that is native to Peninsular Malaysia. This population inhabits the southern and central parts of the Malay Peninsula, and has been classified as critically endangered. As of April 2014, the population was estimated at 80–120 mature individuals, with a continuing downward trend. In the Malay language, the tiger is called harimau, also abbreviated to rimau. It has also been known as the southern Indochinese tiger, to further distinguish it from the Indochinese tiger population to the north in Myanmar and Thailand, which differ genetically from this population."
     },
 
     {
       "title": "Masai Giraffe",
-      "image": "https://www.masaimara.travel/images/masai-giraffe-masai-mara-kenya.jpg",
+      "image": ["https://www.masaimara.travel/images/masai-giraffe-masai-mara-kenya.jpg","https://i.natgeofe.com/n/2f312106-5766-4add-84e2-7ed604dc6afd/01-masai-giraffes-nationalgeographic_1977586_4x3.jpg","https://www.zoonewengland.org/media/1517810/giraffe-gallery-11.jpg"],
       "caption": "The Masai giraffe is distinguished by jagged and irregular spots on its body. Its geographic range includes various parts of eastern Africa",
       "description": "The Masai giraffe is a species or subspecies of giraffe. It is native to East Africa. The Masai giraffe can be found in central and southern Kenya and in Tanzania. It has distinctive jagged, irregular leaf-like blotches that extend from the hooves to its head. The Masai giraffe is currently the national animal of Tanzania. It is the largest-bodied giraffe species, making it the tallest land animal on Earth. The Masai giraffe's most famous feature, its neck, contains seven vertebrae and makes up roughly one third of its body height. "
     },
 
     {
       "title": "Borneo Elephant",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/%D0%A1%D0%BB%D0%BE%D0%BD-%D0%BC%D0%B0%D1%8F%D0%BA.jpg/440px-%D0%A1%D0%BB%D0%BE%D0%BD-%D0%BC%D0%B0%D1%8F%D0%BA.jpg",
+      "image": ["https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/%D0%A1%D0%BB%D0%BE%D0%BD-%D0%BC%D0%B0%D1%8F%D0%BA.jpg/440px-%D0%A1%D0%BB%D0%BE%D0%BD-%D0%BC%D0%B0%D1%8F%D0%BA.jpg"],
       "caption": "Borneo elephants are the smallest subspecies of Asian elephant, endemic to the island of Borneo.",
       "description": "The Borneo elephant, also called the Bornean elephant or the Borneo pygmy elephant, is a subspecies of Asian elephant. Sometimes called Borneo pygmy elephants, these relatively small mammals were separated from the rest of the continent's elephants over 300,000 years ago. Its origin remains the subject of debate. A definitive subspecific classification as Elephas maximus borneensis awaits a detailed range-wide morphometric and genetic study. Since 1986, the Asian elephant has been listed as Endangered on the IUCN Red List as the population has declined by at least 50% over the last three generations, estimated to be 60–75 years. It is pre-eminently threatened by loss, degradation and fragmentation of habitat."
     },
 
     {
       "title": "Malayan Tiger",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/MalayanTiger.jpg/320px-MalayanTiger.jpg",
+      "image": ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/MalayanTiger.jpg/320px-MalayanTiger.jpg"],
       "caption": "From measurements of 11 males and 8 females, the average length of a male is 8 ft 6 in (259 cm), and of a female 7 ft 10 in (239 cm)",
       "description": "The Malayan tiger is a tiger from a specific population of the Panthera tigris tigris subspecies that is native to Peninsular Malaysia. This population inhabits the southern and central parts of the Malay Peninsula, and has been classified as critically endangered. As of April 2014, the population was estimated at 80–120 mature individuals, with a continuing downward trend. In the Malay language, the tiger is called harimau, also abbreviated to rimau. It has also been known as the southern Indochinese tiger, to further distinguish it from the Indochinese tiger population to the north in Myanmar and Thailand, which differ genetically from this population."
     },
 
     {
       "title": "Masai Giraffe",
-      "image": "https://www.masaimara.travel/images/masai-giraffe-masai-mara-kenya.jpg",
+      "image": ["https://www.masaimara.travel/images/masai-giraffe-masai-mara-kenya.jpg"],
       "caption": "The Masai giraffe is distinguished by jagged and irregular spots on its body. Its geographic range includes various parts of eastern Africa",
       "description": "The Masai giraffe is a species or subspecies of giraffe. It is native to East Africa. The Masai giraffe can be found in central and southern Kenya and in Tanzania. It has distinctive jagged, irregular leaf-like blotches that extend from the hooves to its head. The Masai giraffe is currently the national animal of Tanzania. It is the largest-bodied giraffe species, making it the tallest land animal on Earth. The Masai giraffe's most famous feature, its neck, contains seven vertebrae and makes up roughly one third of its body height. "
     },
 
     {
       "title": "Borneo Elephant",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/%D0%A1%D0%BB%D0%BE%D0%BD-%D0%BC%D0%B0%D1%8F%D0%BA.jpg/440px-%D0%A1%D0%BB%D0%BE%D0%BD-%D0%BC%D0%B0%D1%8F%D0%BA.jpg",
+      "image": ["https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/%D0%A1%D0%BB%D0%BE%D0%BD-%D0%BC%D0%B0%D1%8F%D0%BA.jpg/440px-%D0%A1%D0%BB%D0%BE%D0%BD-%D0%BC%D0%B0%D1%8F%D0%BA.jpg"],
       "caption": "Borneo elephants are the smallest subspecies of Asian elephant, endemic to the island of Borneo.",
       "description": "The Borneo elephant, also called the Bornean elephant or the Borneo pygmy elephant, is a subspecies of Asian elephant. Sometimes called Borneo pygmy elephants, these relatively small mammals were separated from the rest of the continent's elephants over 300,000 years ago. Its origin remains the subject of debate. A definitive subspecific classification as Elephas maximus borneensis awaits a detailed range-wide morphometric and genetic study. Since 1986, the Asian elephant has been listed as Endangered on the IUCN Red List as the population has declined by at least 50% over the last three generations, estimated to be 60–75 years. It is pre-eminently threatened by loss, degradation and fragmentation of habitat."
     }

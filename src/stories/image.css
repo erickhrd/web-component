@@ -5,27 +5,128 @@
     border-radius: 20px;
   }
 
-.storybook-image--gallery {
+  /* Gallery styles */
+  .storybook-image--gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .storybook-image--gallery-main-image {
     position: relative;
     display: block;
-    min-height: 240px;
+ 
+  }
+
+  .storybook-image--gallery-main-image > img{
+    display: block;
+    height: 240px;
+    width: fill-available;
     max-width: 320px;
+    border-radius: 20px;
   }
   
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 640px;
-    height: 480px;
-    background-color: rgba(0,0,0,0);
+  .storybook-image--gallery-thumb-bar {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
   }
-
-  .thumb-bar img {
+  
+  .storybook-image--gallery-thumb-bar img {
     display: block;
     width: 20%;
+    height: 70px;
     float: left;
     cursor: pointer;
+    border-radius: 20px;
+    margin: 5px;
+  }
+  
+  /* Slideshow styles */
+  .storybook-image--slideshow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
   }
 
- 
+  .storybook-image--slideshow-image-container{
+    position: relative;
+  }
+
+  .storybook-image--slideshow-image-wrapper{
+    position: absolute;
+  }
+  .mySlides {
+    display: none;
+    height: 240px;
+    width: fill-available;
+    max-width: 320px;
+    border-radius: 20px;
+  }
+  
+  .mySlides.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 240px;
+    width: fill-available;
+    max-width: 320px;
+    border-radius: 20px;
+  }
+  
+  .storybook-image--slideshow-image-wrapper > img{
+    height: 240px;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 20px;
+  }
+  .fade {
+    animation: fade 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  /* Next & previous buttons */
+  .storybook-image--slideshow-prev, .storybook-image--slideshow-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    background-color: #717171;
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .storybook-image--slideshow-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .storybook-image--slideshow-prev:hover, .storybook-image--slideshow-next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* The dots/circles */
+  .storybook-image--slideshow-dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+ .storybook-image--slideshow-dot:hover, .storybook-image--slideshow-dot.active {
+    background-color: #717171;
+  }
