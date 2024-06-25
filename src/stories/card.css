@@ -6,15 +6,32 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.storybook-card--container-vertical{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+
+.storybook-card--container-horizontal{
+  display: grid;
+  justify-content: center;
+}
+
 .storybook-card--vertical {
-  display: inline-block;
-  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
   width: auto;
-  max-width: 320px;
+  height: 640px;
   padding: 15px;
+  justify-content: center;
   text-align: center;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
   border-radius:20px;
+}
+
+.storybook-card--vertical-expanded {
+  height: fit-content;
 }
 
 .storybook-card--horizontal {
@@ -28,18 +45,10 @@
   border-radius:20px;
 }
 
-.storybook-card--horizontal > div{
-  text-align: center;
-}
-
-.storybook-card--img-container {
+.storybook-card--img-container-vertical {
     min-height: 230px;
     width: 100%;
     display: inline-block;
-}
-
-.storybook-card--img-container > img {
-  border-radius: 20px;
 }
 
 .storybook-card--img-container > p {
@@ -49,7 +58,10 @@
   font-family: 'Nunito Sans';
 }
 
-.storybook-card--text-container {
+.storybook-card--text-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 10px;
   font-size: 14px;
   font-family: 'Nunito Sans';
@@ -66,8 +78,8 @@ storybook-button {
 }
 
 .storybook-card--button-wrapper {
+  max-width: 340px;
   position: relative;
-  display: inline-block;
  }
  
  [popover] {
@@ -93,6 +105,7 @@ storybook-button {
    border: 1px solid #ddd;
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
    padding: 10px;
+   z-index: 1000;
  }
  
  [popover]:popover-open + .storybook-card--share-menu {
@@ -123,4 +136,33 @@ storybook-button {
 
 .storybook-card--social-share ul li a:hover {
   color: #007bff;
+}
+
+@media (max-width: 755px){
+  .storybook-card--container-vertical{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .storybook-card--vertical{
+    width: 350px;
+  }
+}
+
+   @media (max-width: 900px) { 
+  .storybook-card--img-container-horizontal {
+      width: 50%;
+   }
+   .storybook-card--text-container-horizontal{
+      width: 50%;
+   }
+   .storybook-card--horizontal{
+    min-width: 325px;
+   }
+}
+
+@media (max-width: 460px) {
+  .storybook-card--text-container-horizontal > div > storybook-button {
+    display: block;
+  }
 }
