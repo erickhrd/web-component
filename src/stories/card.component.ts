@@ -12,8 +12,7 @@ import * as Data from './card-data.json';
   <div [ngClass]="direction">
   <div [ngClass]="getClasses(i)" *ngFor="let data of item; let i = index">
     <div class="storybook-card--img-container" [ngClass]="imgContainer" >
-      <storybook-image layout=slideshow  [src]="data.image"></storybook-image>
-      <p style="font-style: italic;">{{data.caption}}</p>
+      <storybook-image layout=gallery [thumbWidth]=20   [src]="data.image" [alt]="data.alt" [caption]="data.caption" ></storybook-image>
     </div>
     
     <div class="storybook-card--text-container" [ngClass]="textContainer">

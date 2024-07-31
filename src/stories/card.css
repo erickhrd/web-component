@@ -138,6 +138,15 @@ storybook-button {
   color: #007bff;
 }
 
+.storybook-card--img-container-horizontal {
+  align-self: center;
+  width: 50%;
+}
+.storybook-card--text-container-horizontal{
+  align-self: center;
+  width: 50%;
+}
+
 @media (max-width: 755px){
   .storybook-card--container-vertical{
     display: grid;
@@ -150,12 +159,7 @@ storybook-button {
 }
 
    @media (max-width: 900px) { 
-  .storybook-card--img-container-horizontal {
-      width: 50%;
-   }
-   .storybook-card--text-container-horizontal{
-      width: 50%;
-   }
+
    .storybook-card--horizontal{
     min-width: 325px;
    }
