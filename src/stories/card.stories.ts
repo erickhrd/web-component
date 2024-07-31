@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { CardComponent } from './card.component';
-import { fn } from '@storybook/test';
 
 
 const meta: Meta<CardComponent> = {
@@ -13,8 +12,7 @@ const meta: Meta<CardComponent> = {
     layout: 'fullscreen',
   },
   args: {
-    onShare: fn(),
-    onMore: fn(),
+  
   },
 };
 
